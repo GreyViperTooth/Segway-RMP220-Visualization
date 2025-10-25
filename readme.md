@@ -26,14 +26,6 @@ bash
 
 mkdir templates
 
-Place the files in the following structure:
-
-ros_web_dashboard/
-├── app.py                 # Backend server
-├── requirements.txt       # Python dependencies
-└── templates/
-    └── index.html        # Frontend interface
-
 3. Install Python Dependencies
 bash
 
@@ -90,28 +82,3 @@ Now use the dashboard to:
     Subscribe to /turtle1/pose to see live position data
     Publish to /turtle1/cmd_vel to control the turtle
     Call /spawn service to create a new turtle
-
-
-
-Architecture
-System Overview
-
-┌─────────────────┐
-│   ROS System    │
-│  Topics/Services│
-│    /Actions     │
-└────────┬────────┘
-         │ rospy API
-         │
-┌────────▼────────┐
-│  Flask Backend  │
-│  - REST API     │
-│  - WebSocket    │
-│  - ROS Bridge   │
-└────────┬────────┘
-         │ WebSocket (JSON)
-         │
-┌────────▼────────┐
-│  Web Frontend   │
-│  HTML/CSS/JS    │
-└─────────────────┘
