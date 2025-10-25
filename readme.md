@@ -71,10 +71,10 @@ http://<your-machine-ip>:5000
 4. Test with TurtleSim
 bash
 
-# Terminal 1
+Terminal 1
 rosrun turtlesim turtlesim_node
 
-# Terminal 2
+Terminal 2
 rosrun turtlesim turtle_teleop_key
 
 Now use the dashboard to:
